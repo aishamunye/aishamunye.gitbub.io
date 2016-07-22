@@ -36,18 +36,34 @@
 		<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
 	</div>
 	<div class="row">
-		<label for="email">Your email:</label><br />
-		<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
-	</div>
-	<div class="row">
 		<label for="message">Your message:</label><br />
 		<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
 	</div>
-	<input id="submit_button" type="submit" value="Send email" />
 </form>
+
+<a href="mailto:aishamunye181@hotmail.com" id='send_mail'>Send mail</a>
+
+
+
       
       
       <p id = "footer">&copy; Aisha Publishers Limited-Made</p>
   	</div>
+  	
+  	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  	
+  	<script>
+  	  $(document).ready(function() {
+  	    $('#send_mail').on('click', function(e) {
+  	      var href="mailto:aishamunye181@hotmail.com"
+  	      var name = $('#name').val();
+  	      var message = $('#message').val();
+  	      
+  	      href = href + '?subject=hello%20from%20' + name + '&body=' + message;
+  	      
+  	      $(this).attr('href', href);
+  	    })
+  	  });
+  	</script>
  </body>
 </html>

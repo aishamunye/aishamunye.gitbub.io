@@ -27,10 +27,30 @@
       </ul>
       <div class="headerBreak"></div>
       
-      <div>I like the codes</div>
+    
+      
+      <section class="stage">
+      <figure class="ball">
+        <span class="shadow"></span>
+        <span class="iris"></span>
+      </figure>
+</section>
       
       
       <p id = "footer">&copy; Aisha Publishers Limited-Made</p>
   	</div>
+  	
+  	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  	
+  	<script>
+  	  var colours = ['#9400D3', '#4B0082', '#0000FF', '#00FF00', '#FFFF00', '#FF7F00', '#FF0000'];
+  	  $(document).ready(function() {
+  	    counter = 0;
+  	    setInterval(function() {
+  	      $('body').css('backgroundColor', colours[counter % colours.length]);
+  	      counter++;
+  	    }, 1000);
+  	  });
+  	</script>
  </body>
 </html>
